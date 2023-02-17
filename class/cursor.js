@@ -22,20 +22,51 @@ class Cursor {
     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);
   }
 
-  up() {
+  up = () => {
     // Move cursor up
-  }
+    if (this.row > 0) {
+      this.resetBackgroundColor();
+      this.row--;
+      // console.log(this.row, this.col);
+      this.setBackgroundColor();
+      Screen.render();//Screen.render() will update the display. This must be called anytime the grid or messages change.
 
-  down() {
+    } 
+
+  };
+
+  down = () => {
     // Move cursor down
+    if (this.row < this.numRows - 1) {
+      this.resetBackgroundColor();
+      this.row++;
+      // console.log(this.row, this.col);
+      this.setBackgroundColor();
+      Screen.render();
+    }
   }
 
-  left() {
+
+  left = () => {
     // Move cursor left
+    if (this.col > 0) {
+      this.resetBackgroundColor();
+      this.col--;
+      // console.log(this.row, this.col);
+      this.setBackgroundColor();
+      Screen.render();
+    }
   }
 
-  right() {
+  right = () => {
     // Move cursor right
+    if (this.col < this.numCols - 1) {
+      this.resetBackgroundColor();
+      this.col++;
+      // console.log(this.row, this.col);
+      this.setBackgroundColor();
+      Screen.render();
+    }
   }
 
 }
