@@ -69,7 +69,16 @@ class Cursor {
     }
   }
 
+  select = () => {
+
+  }
+
+  swap = () => {
+    
+  }
+
 }
+
 
 
 module.exports = Cursor;
