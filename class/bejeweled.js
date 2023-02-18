@@ -35,7 +35,7 @@ class Bejeweled {
 
   static checkForMatches(grid) {
 
-    // Fill this in
+    // Fill this
 
   }
 
